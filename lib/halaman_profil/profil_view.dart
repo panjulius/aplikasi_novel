@@ -10,6 +10,6 @@ class HalamanProfil extends StatefulWidget {
 class _HalamanProfilState extends State<HalamanProfil> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(child: Text('profil'),);
   }
 }

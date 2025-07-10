@@ -1,4 +1,5 @@
 import 'package:aplikasi_novel/halaman_baca/baca_view.dart';
+import 'package:aplikasi_novel/main/main_navigation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HalamanBaca()
+      home: MainNavigation()
     );
   }
 }

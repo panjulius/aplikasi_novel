@@ -10,6 +10,6 @@ class HalamanWiki extends StatefulWidget {
 class _HalamanWikiState extends State<HalamanWiki> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(child: Text('wiki'),);
   }
 }

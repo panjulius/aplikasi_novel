@@ -19,8 +19,24 @@ class _MainNavigationState extends State<MainNavigation> {
     HalamanProfil()
   ];
 
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: _pages[_selectedIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
+        items: const[
+          BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Baca'),
+          BottomNavigationBarItem(icon: Icon(Icons.bookmark), label: 'Wiki'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profil'),
+        ]),
+    );
   }
 }

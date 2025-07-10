@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 
-class HalamanBaca extends StatefulWidget {
+class HalamanBaca extends StatelessWidget {
   const HalamanBaca({super.key});
 
   @override
-  State<HalamanBaca> createState() => _HalamanBacaState();
-}
-
-class _HalamanBacaState extends State<HalamanBaca> {
-  @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(child: Text('baca'),);
   }
 }
