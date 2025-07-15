@@ -13,11 +13,7 @@ class MainNavigation extends StatefulWidget {
 class _MainNavigationState extends State<MainNavigation> {
   int _selectedIndex = 0;
 
-  final List<Widget> _pages = [
-    HalamanBaca(),
-    HalamanWiki(),
-    HalamanProfil()
-  ];
+  final List<Widget> _pages = [HalamanWiki(), HalamanBaca(), HalamanProfil()];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -29,14 +25,37 @@ class _MainNavigationState extends State<MainNavigation> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _pages[_selectedIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
-        items: const[
-          BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Baca'),
-          BottomNavigationBarItem(icon: Icon(Icons.bookmark), label: 'Wiki'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profil'),
-        ]),
+      floatingActionButton: FloatingActionButton(
+        shape: const CircleBorder(),
+        onPressed: () => _onItemTapped(1),
+        backgroundColor: _selectedIndex == 1 ? Colors.blue : Colors.grey,
+        child: Icon(Icons.book),
+        tooltip: 'Baca',
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomAppBar(
+        height: 60,
+        shape: const CircularNotchedRectangle(),
+        notchMargin: 8,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            IconButton(
+              onPressed: () => _onItemTapped(0),
+              icon: Icon(Icons.bookmark),
+              color: _selectedIndex == 0 ? Colors.blue : Colors.grey,
+              tooltip: 'Wiki',
+            ),
+            SizedBox(width: 40),
+            IconButton(
+              onPressed: () => _onItemTapped(2),
+              icon: Icon(Icons.person),
+              color: _selectedIndex == 2 ? Colors.blue : Colors.grey,
+              tooltip: 'Profil',
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
