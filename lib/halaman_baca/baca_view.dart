@@ -1,3 +1,4 @@
+import 'package:aplikasi_novel/widget/judul.dart';
 import 'package:flutter/material.dart';
 
 class HalamanBaca extends StatelessWidget {
@@ -5,6 +6,12 @@ class HalamanBaca extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('baca'),);
+    return Scaffold(
+      body: Column(
+        children: [
+          Judul(text:'Baca Novel'),
+        ],
+      ),
+    );
   }
 }

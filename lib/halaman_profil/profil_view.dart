@@ -1,3 +1,4 @@
+import 'package:aplikasi_novel/widget/judul.dart';
 import 'package:flutter/material.dart';
 
 class HalamanProfil extends StatefulWidget {
@@ -10,6 +11,12 @@ class HalamanProfil extends StatefulWidget {
 class _HalamanProfilState extends State<HalamanProfil> {
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('profil'),);
+    return Scaffold(
+      body: Column(
+        children: [
+          Judul(text: 'Profil Pengguna'),
+        ],
+      ),
+    );
   }
 }
