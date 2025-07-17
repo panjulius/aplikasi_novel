@@ -1,6 +1,6 @@
-import 'package:aplikasi_novel/halaman_baca/baca_view.dart';
-import 'package:aplikasi_novel/halaman_profil/profil_view.dart';
-import 'package:aplikasi_novel/wiki/wiki_view.dart';
+import 'package:aplikasi_novel/pages/baca/baca_view.dart';
+import 'package:aplikasi_novel/pages/profil/profil_view.dart';
+import 'package:aplikasi_novel/pages/wiki/wiki_view.dart';
 import 'package:flutter/material.dart';
 
 class MainNavigation extends StatefulWidget {
