@@ -1,3 +1,4 @@
+import 'package:aplikasi_novel/pages/wiki/widget/widget.dart';
 import 'package:aplikasi_novel/widget/judul.dart';
 import 'package:flutter/material.dart';
 
@@ -15,6 +16,11 @@ class _HalamanWikiState extends State<HalamanWiki> {
       body: Column(
         children: [
           Judul(text: 'Wiki Novel'),
+          WikiButton(text: 'KARAKTER'),
+          SizedBox(height: 10),
+          WikiButton(text: 'LOKASI'),
+          SizedBox(height: 10),
+          WikiButton(text: 'LAINNYA'),
         ],
       ),
     );
